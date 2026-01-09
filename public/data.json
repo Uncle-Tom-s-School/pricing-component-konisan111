@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "name": "Basic",
+        "pricePerMonth": 0,
+        "features": [
+            "Basic document collaboration",
+            "2 GB storage",
+            "Great security and support"
+        ],
+        "highlighted": false
+    },
+    {
+        "id": 2,
+        "name": "Pro",
+        "pricePerMonth": 9.99,
+        "features": [
+            "All essential integrations",
+            "50 GB storage",
+            "More control and insights"
+        ],
+        "highlighted": true
+    },
+    {
+        "id": 3,
+        "name": "Ultimate",
+        "pricePerMonth": 19.99,
+        "features": [
+            "Robust work management",
+            "100 GB storage",
+            "VIP support"
+        ],
+        "highlighted": false
+    }
+]

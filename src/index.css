@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-family: sans-serif;
+  --primary-color: rgb(0, 136, 255);
+  --card-bg-color: rgba(255, 255, 255, 0.9);
+}
+
+#root{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../src/assets/background.jpg");
+  background-size: cover;
+  background-position-x: right;
+  background-position-y: bottom;
+}
