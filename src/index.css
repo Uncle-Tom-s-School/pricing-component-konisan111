@@ -1,16 +1,17 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root{
+:root {
   font-family: sans-serif;
   --primary-color: rgb(0, 136, 255);
   --card-bg-color: rgba(255, 255, 255, 0.9);
+  --text-color: #000000;
 }
 
-#root{
+#root {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -20,4 +21,100 @@
   background-size: cover;
   background-position-x: right;
   background-position-y: bottom;
+  background-color: #ffd700;
+}
+
+.container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.price-card {
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  width: 250px;
+  height: 420px;
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.price-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.price-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.price-card ul {
+  list-style: none;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.price-card li {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.price-card li:last-child {
+  border-bottom: none;
+}
+
+.price-card button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 0;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.price-card button:hover {
+  opacity: 0.9;
+}
+
+.price-card.highlighted {
+  background-color: var(--primary-color);
+  color: white;
+  transform: scale(1.1);
+  z-index: 10;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.price-card.highlighted h3,
+.price-card.highlighted h1 {
+  color: white;
+}
+
+.price-card.highlighted button {
+  background-color: white;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .price-card.highlighted {
+    transform: scale(1);
+  }
 }
